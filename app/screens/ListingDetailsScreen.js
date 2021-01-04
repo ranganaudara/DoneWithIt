@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Image, StyleSheet } from "react-native";
 import AppText from "../components/AppText";
+
 import ListItem from "../components/ListItem";
 import colors from "../config/colors";
 
@@ -9,12 +10,12 @@ function ListingDetailsScreen(props) {
     <View>
       <Image style={styles.image} source={require("../assets/jacket.jpg")} />
       <View style={styles.detailsContainer}>
-        <AppText style={styles.title}>Jacket For Sale</AppText>
+        <AppText style={styles.title}>Red jacket for sale</AppText>
         <AppText style={styles.price}>$100</AppText>
         <View style={styles.userContainer}>
           <ListItem
             image={require("../assets/mosh.jpg")}
-            title="Rangana Udara"
+            title="Mosh Hamedani"
             subTitle="5 Listings"
           />
         </View>
@@ -24,16 +25,12 @@ function ListingDetailsScreen(props) {
 }
 
 const styles = StyleSheet.create({
-  image: {
-    width: "100%",
-    height: 300,
-  },
   detailsContainer: {
     padding: 20,
   },
-  title: {
-    fontSize: 24,
-    fontWeight: "500",
+  image: {
+    width: "100%",
+    height: 300,
   },
   price: {
     color: colors.secondary,
@@ -41,8 +38,12 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginVertical: 10,
   },
+  title: {
+    fontSize: 24,
+    fontWeight: "500",
+  },
   userContainer: {
-    marginVertical: 30,
+    marginVertical: 40,
   },
 });
 
